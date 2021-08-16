@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         getSupportActionBar().setTitle("Aplikasi Catatan Harian");
         setContentView(R.layout.activity_main);
 
@@ -127,7 +128,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
             SimpleAdapter simpleAdapter = new SimpleAdapter(this, itemDataList, android.R.layout.simple_list_item_2,
-                    new String[]{"name", "date"}, new int[]{android.R.id.text1, android.R.id.text1});
+                    new String[]{"name", "date"}, new int[]{android.R.id.text1, android.R.id.text2});
             listView.setAdapter(simpleAdapter);
             simpleAdapter.notifyDataSetChanged();
         }
